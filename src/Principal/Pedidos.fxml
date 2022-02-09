@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="Prncipal.PedidosController">
+   <children>
+      <GridPane layoutX="30.0" layoutY="20.0" prefHeight="90.0" prefWidth="519.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.0" minWidth="10.0" prefWidth="76.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="521.0" minWidth="10.0" prefWidth="443.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="52.0" text="Nombre" />
+            <Label text="Direccion" GridPane.rowIndex="1" />
+            <Label text="Telefono" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldNombre" GridPane.columnIndex="1" />
+            <TextField fx:id="textFieldDireccion" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldTelefono" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="313.0" layoutY="126.0" prefHeight="65.0" prefWidth="237.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="46.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="59.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="77.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="55.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Hora:" />
+            <Label text="Precio:" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="86.0" text="Precio Total:" GridPane.columnIndex="2" />
+            <Button fx:id="btnAñadir" minHeight="19.0" mnemonicParsing="false" onAction="#handlebtnAnadir" prefHeight="32.0" prefWidth="110.0" text="Añadir" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label fx:id="labelHora" prefHeight="18.0" prefWidth="59.0" GridPane.columnIndex="1" />
+            <Label fx:id="labelPrecio" prefHeight="18.0" prefWidth="57.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labelPrecioTotal" prefHeight="18.0" prefWidth="53.0" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <Pane layoutX="14.0" layoutY="213.0" prefHeight="162.0" prefWidth="144.0">
+         <children>
+            <Label layoutY="-2.0" prefHeight="33.0" prefWidth="200.0" text="Seleccione una pizza" />
+            <Group fx:id="GroupButton" layoutX="14.0" layoutY="33.0">
+               <children>
+                  <RadioButton fx:id="radioPlacer" mnemonicParsing="false" onAction="#onActionPlacer" text="A piacere">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="RdMargarita" layoutY="30.0" mnemonicParsing="false" onAction="#onActionMargarita" prefHeight="37.0" prefWidth="109.0" text="Margarita">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="RdQuatro" layoutY="65.0" mnemonicParsing="false" onAction="#onActionQuatro" prefHeight="35.0" prefWidth="109.0" text="Quatro Stagioni">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="RdDiavola" layoutY="82.0" mnemonicParsing="false" onAction="#onActionDiabola" prefHeight="60.0" prefWidth="109.0" text="Diavola">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </Group>
+         </children>
+      </Pane>
+      <GridPane layoutX="214.0" layoutY="236.0" prefHeight="150.0" prefWidth="369.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="ChTomate" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Sala Tomate">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChPicante" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Salsa Picante" GridPane.columnIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChBarbacoa" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Salsa Barbacoa" GridPane.columnIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChCarbonara" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Salsa Carbonara" GridPane.columnIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChMozzarella" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Mozzarella" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChJamon" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Jamon Cocido" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChSetas" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Setas" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChAlcahofas" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Alcachofas" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChAtun" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Atun" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChBacon" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Bacon" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChPeperoni" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Pepperoni" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChPimiento" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Pimiento Rojo" GridPane.rowIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChChampinon" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Champiñon" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChAnchoa" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Anchoas" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChCebolla" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Cebolla" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChPina" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Piña" GridPane.rowIndex="4">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChCarne" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Carne Picada" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChPollo" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Pollo" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChExtra" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Extra queso" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="ChAceitunas" mnemonicParsing="false" onAction="#actionAnadirExtra" text="Aceitunas" GridPane.rowIndex="2">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </GridPane>
+      <Label layoutX="214.0" layoutY="205.0" prefHeight="18.0" prefWidth="137.0" text="Ingredientes Extra" />
+   </children>
+</AnchorPane>
